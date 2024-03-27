@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import idom_jupyter
 
 PRODUCTION = True
 BUNDLE_JS = "bundle.min.js"
@@ -39,3 +40,5 @@ try:
     )
 except Exception as ex:
     pass
+    
+from .widgets.Annotation import Annotation
