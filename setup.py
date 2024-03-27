@@ -2,12 +2,12 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-version = Path("./labeler_ui/version").read_text().strip()
+version = Path("./meganno_ui/version").read_text().strip()
 package = {
-    "name": "labeler_ui",
+    "name": "meganno_ui",
     "version": version,
-    "description": "labeler-ui NLP Annotation Tools in Jupyter Notebook",
-    "url": "https://github.com/rit-git/labeler-ui",
+    "description": "meganno-ui NLP Annotation Tools in Jupyter Notebook",
+    "url": "https://github.com/megagonlabs/meganno-ui",
     "author": "Megagon Labs",
     "author_email": "",
     "license": "unlicense",
