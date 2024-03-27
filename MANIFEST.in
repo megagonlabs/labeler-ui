@@ -1,2 +1,2 @@
-include labeler_ui/bundle.min.js
-include labeler_ui/version
+include meganno_ui/bundle.min.js
+include meganno_ui/version
