@@ -2,7 +2,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3 import Retry
 
-from labeler_ui.constants import REQUEST_TIMEOUT_SECONDS
+from meganno_ui.constants import REQUEST_TIMEOUT_SECONDS
 
 
 def requests_retry_session(

@@ -1,10 +1,10 @@
 .ipynb_checkpoints/
 .vscode/
 .DS_Store
-labeler_ui.egg-info/
-labeler_ui/__pycache__/
-labeler_ui/bundle.js
-labeler_ui/dev/__pycache__/
+meganno_ui.egg-info/
+meganno_ui/__pycache__/
+meganno_ui/bundle.js
+meganno_ui/dev/__pycache__/
 __pycache__/
 development.ipynb
 

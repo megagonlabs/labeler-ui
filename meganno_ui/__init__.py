@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import idom_jupyter
 
 PRODUCTION = True
 BUNDLE_JS = "bundle.min.js"
@@ -13,10 +12,10 @@ except ImportError or ModuleNotFoundError:
     pass
 _VERSION_PATH = Path(__file__).parent / "version"
 VERSION = Path(_VERSION_PATH).read_text().strip()
-print("labeler-ui: " + VERSION)
-MODULE_NAME = f"labeler_ui@{VERSION}"
+print("meganno-ui: " + VERSION)
+MODULE_NAME = f"meganno_ui@{VERSION}"
 BUNDLE_PATH = Path(__file__).parent / BUNDLE_JS
-FALLBACK = "Failed to display labeler_ui widget."
+FALLBACK = "Failed to display meganno_ui widget."
 
 # register callback for colab
 try:
@@ -40,5 +39,3 @@ try:
     )
 except Exception as ex:
     pass
-
-from .widgets.Annotation import Annotation

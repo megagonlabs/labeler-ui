@@ -11,7 +11,7 @@ You can use either `SSH` or `HTTPS` to install this python package
 
 ```python
 # To use library modules
-from labeler_ui import ...
+from meganno_ui import ...
 ```
 ## For UI development
 - Clone and [create your own branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)
@@ -24,4 +24,4 @@ from labeler_ui import ...
   - `stage` branch is a **development** branch.
   - `main` branch is a **production** branch.
   
-P.S. Periodically delete JS files created by labeler-ui under `/Users/[username]/Library/Application Support/idom-jupyter/` (run `whoami` to get username from the terminal [macOS])
+P.S. Periodically delete JS files created by meganno-ui under `/Users/[username]/Library/Application Support/idom-jupyter/` (run `whoami` to get username from the terminal [macOS])
