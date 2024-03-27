@@ -1,0 +1,2 @@
+include labeler_ui/bundle.min.js
+include labeler_ui/version

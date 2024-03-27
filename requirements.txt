@@ -1,0 +1,6 @@
+idom>=0.42,<0.43
+idom_jupyter==0.7.7
+ipykernel==6.22.0
+pydash==7.0.6
+requests==2.31.0
+varname==0.11.1
