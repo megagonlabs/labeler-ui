@@ -1,0 +1,73 @@
+{
+    "width": 200,
+    "height": 200,
+    "scales": [
+        {
+            "name": "x",
+            "zero": false,
+            "domain": { "data": "source", "field": "x" },
+            "range": "width"
+        },
+        {
+            "name": "y",
+            "zero": false,
+            "domain": { "data": "source", "field": "y" },
+            "range": "height"
+        },
+        {
+            "name": "color",
+            "type": "ordinal",
+            "domain": { "data": "source", "field": "label" },
+            "range": { "scheme": "category20c" }
+        }
+    ],
+    "legends": [
+        {
+            "fill": "color",
+            "title": "Labels",
+            "encode": {
+                "title": {
+                    "update": {
+                        "fontSize": { "value": 14 }
+                    }
+                },
+                "labels": {
+                    "update": {
+                        "fontSize": { "value": 14 },
+                        "fill": { "value": "#10161A" }
+                    }
+                }
+            }
+        }
+    ],
+    "axes": [
+        {
+            "scale": "x",
+            "grid": true,
+            "orient": "bottom"
+        },
+        {
+            "scale": "y",
+            "grid": true,
+            "domain": false,
+            "orient": "left"
+        }
+    ],
+    "marks": [
+        {
+            "type": "symbol",
+            "from": { "data": "source" },
+            "encode": {
+                "update": {
+                    "x": { "scale": "x", "field": "x" },
+                    "y": { "scale": "y", "field": "y" },
+                    "shape": { "value": "circle" },
+                    "fill": {
+                        "scale": "color",
+                        "field": "label"
+                    }
+                }
+            }
+        }
+    ]
+}

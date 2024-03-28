@@ -1,0 +1,51 @@
+{
+    "width": 300,
+    "height": 200,
+    "config": {
+        "legend": {
+            "titleFontSize": 14,
+            "labelFontSize": 14
+        }
+    },
+    "encoding": {
+        "theta": {
+            "field": "total",
+            "type": "quantitative",
+            "stack": "normalize",
+            "title": "Total"
+        },
+        "color": { "field": "label", "title": "Label" },
+        "fillOpacity": {
+            "condition": [{ "param": "highlight", "value": 1 }],
+            "value": 0.333
+        }
+    },
+    "layer": [
+        {
+            "params": [
+                {
+                    "name": "highlight",
+                    "select": { "type": "point", "on": "mouseover" }
+                }
+            ],
+            "mark": {
+                "type": "arc",
+                "tooltip": true,
+                "stroke": "white",
+                "innerRadius": 20
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "radius": 120
+            },
+            "encoding": {
+                "text": {
+                    "field": "total",
+                    "type": "nominal"
+                }
+            }
+        }
+    ]
+}
