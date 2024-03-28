@@ -13,7 +13,7 @@ const minify = process.argv[process.argv.length - 1] === "minify";
 export default {
     input: "src/index.js",
     output: {
-        file: `../labeler_ui/bundle${minify ? ".min" : ""}.js`,
+        file: `../meganno_ui/bundle${minify ? ".min" : ""}.js`,
         format: "esm",
         inlineDynamicImports: true,
     },
