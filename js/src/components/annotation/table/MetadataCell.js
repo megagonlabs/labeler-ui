@@ -12,7 +12,11 @@ import { AnnotationContext } from "../../context/AnnotationContext";
 import { DoubleClickPopover } from "./DoubleClickPopover";
 export const MetadataCell = ({ rowIndex }) => {
     const { annotationState } = useContext(AnnotationContext);
-    const metadata = _.get(annotationState, ["data", rowIndex, "metadata"], []);
+    const metadata = _.get(
+        annotationState,
+        ["data", rowIndex, "record_metadata"],
+        []
+    );
     const showFullMetadataValue = _.get(
             annotationState,
             "settings.showFullMetadataValue",

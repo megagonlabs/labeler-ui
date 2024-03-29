@@ -212,7 +212,7 @@ export const Editor = ({ setView, smartHighlight }) => {
                             {!_.isEmpty(
                                 _.get(
                                     annotationState,
-                                    `data.${annotationState.dataFocusIndex}.metadata`,
+                                    `data.${annotationState.dataFocusIndex}.record_metadata`,
                                     []
                                 )
                             ) ? (

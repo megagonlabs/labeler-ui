@@ -14,7 +14,7 @@ export const MetadataViewer = () => {
         setMetadata(
             _.get(
                 annotationState,
-                ["data", annotationState.dataFocusIndex, "metadata"],
+                ["data", annotationState.dataFocusIndex, "record_metadata"],
                 []
             )
         );

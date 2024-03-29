@@ -121,7 +121,7 @@ const reducer = (state, action) => {
             });
             var metadataNames = new Set();
             for (let i = 0; i < data.length; i++) {
-                const metadata = _.get(data, [i, "metadata"], []);
+                const metadata = _.get(data, [i, "record_metadata"], []);
                 for (let j = 0; j < metadata.length; j++) {
                     const metadataName = metadata[j].name;
                     if (!_.isNil(metadataName)) metadataNames.add(metadataName);
