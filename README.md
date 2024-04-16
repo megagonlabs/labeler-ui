@@ -1,4 +1,7 @@
 # meganno-ui
+
+## **Prerequisite Knowledge**
+Documentation for [MEGAnno concepts](https://meganno.megagon.info) 
 ## To use in Python Notebook
 ![version](https://img.shields.io/badge/meganno--ui%20latest-v1.5.6-blue)
 
