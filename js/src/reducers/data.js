@@ -39,7 +39,7 @@ export const ipySubsetAnnotations = ({ state, payload }) => {
         const label_json_loads = `json.loads('${JSON.stringify(
             ipy_payload.labels
         )}')`;
-        const set_annotation_command = `LabelerSubset.${_.get(state, [
+        const set_annotation_command = `MegannoSubset.${_.get(state, [
             "ipy_interface",
             "subset",
         ])}.set_annotations(uuid='${

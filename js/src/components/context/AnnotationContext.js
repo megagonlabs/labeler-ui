@@ -235,7 +235,7 @@ const reducer = (state, action) => {
                         const label_json_loads = `json.loads('${JSON.stringify(
                             ipy_payload.labels
                         )}')`;
-                        const set_annotation_command = `LabelerSubset.${_.get(
+                        const set_annotation_command = `MegannoSubset.${_.get(
                             state,
                             ["ipy_interface", "subset"]
                         )}.set_annotations(uuid='${
@@ -1027,7 +1027,7 @@ const AnnotationProvider = (props) => {
                     uids.add(target.annotator);
                 }
             }
-            const get_user_names_command = `LabelerSubset.${_.get(
+            const get_user_names_command = `MegannoSubset.${_.get(
                 annotationState,
                 "ipy_interface.service"
             )}.get_users_by_uids(uids=${JSON.stringify(Array.from(uids))})`;
@@ -1084,7 +1084,7 @@ const AnnotationProvider = (props) => {
                     if (!_.isNil(target.verifier)) uids.add(target.verifier);
                 }
             }
-            const get_user_names_command = `LabelerSubset.${_.get(
+            const get_user_names_command = `MegannoSubset.${_.get(
                 annotationState,
                 "ipy_interface.service"
             )}.get_users_by_uids(uids=${JSON.stringify(Array.from(uids))})`;

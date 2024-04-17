@@ -37,7 +37,7 @@ describe("Annotation setters", () => {
             if (initialState.selectedDatapointIds.has(data[i].uuid)) {
                 data[i].annotation_list = [
                     {
-                        annotator: "labeler-ui",
+                        annotator: "meganno-ui",
                         [RECORD_LEVEL_LABELS_KEY]: [
                             { ...dummy_label, label_level: "record" },
                         ],
@@ -76,7 +76,7 @@ describe("Annotation setters", () => {
         };
         data[0].annotation_list = [
             {
-                annotator: "labeler-ui",
+                annotator: "meganno-ui",
                 [SPAN_LEVEL_LABELS_KEY]: [label],
             },
         ];

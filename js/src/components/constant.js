@@ -201,8 +201,8 @@ export const labelValueSortedCount = (valueCount, totalCount) => {
     return sortedCount;
 };
 export const DEFAULT_ANNOTATOR = {
-    name: "labeler-ui",
-    user_id: "labeler-ui",
+    name: "meganno-ui",
+    user_id: "meganno-ui",
 };
 export const GREEN_CHECK_COLOR = Colors.GREEN3;
 export const MENU_ITEM_NO_STYLE = {
@@ -468,8 +468,8 @@ export const python_error_toast = ({ code, message, error }) =>
     );
 export const notebook_call = function (code, kernel_id) {
     const python_code = [
-        "from meganno_client import Service as LabelerService; ",
-        "from meganno_client.subset import Subset as LabelerSubset; ",
+        "from meganno_client import Service as MegannoService; ",
+        "from meganno_client.subset import Subset as MegannoSubset; ",
         `import json; print(json.dumps(${code})); `,
     ].join("");
     if (!_.isEqual(typeof Jupyter, "undefined")) {
@@ -502,7 +502,7 @@ export const notebook_call = function (code, kernel_id) {
             (async function () {
                 try {
                     const result = await google.colab.kernel.invokeFunction(
-                        "notebook.labeler_colab_callback", // The callback name.
+                        "notebook.meganno_colab_callback", // The callback name.
                         [python_code], // The arguments.
                         {} // kwargs
                     );

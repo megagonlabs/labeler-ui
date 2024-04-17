@@ -22,7 +22,7 @@ export const Distribution = () => {
     useEffect(() => {
         if (_.isNil(focusLabel) || _.isEmpty(focusLabel)) return;
         setIsLoading(true);
-        const get_label_distributions_command = `LabelerService.${_.get(
+        const get_label_distributions_command = `MegannoService.${_.get(
             dashboardState,
             "ipy_interface.service"
         )}.get_statistics().get_label_distributions(label_name='${focusLabel}')`;

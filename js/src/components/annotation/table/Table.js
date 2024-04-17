@@ -309,7 +309,7 @@ export const Table = ({ setView, dataColumnWidth }) => {
             _.isNil(verifyingId)
         )
             return;
-        const get_verification_annotations_command = `LabelerSubset.${_.get(
+        const get_verification_annotations_command = `MegannoSubset.${_.get(
             annotationState,
             "ipy_interface.subset"
         )}.get_verification_annotations(label_level='record', label_name='${currentLabel}', annotator='${verifyingId}')`;
@@ -346,7 +346,7 @@ export const Table = ({ setView, dataColumnWidth }) => {
                 idsToFetch.push(uuids[i++]);
             }
             i--;
-            const get_reconciliation_data_command = `LabelerSubset.${_.get(
+            const get_reconciliation_data_command = `MegannoSubset.${_.get(
                 annotationState,
                 "ipy_interface.service"
             )}.get_reconciliation_data(uuid_list=['${idsToFetch.join(

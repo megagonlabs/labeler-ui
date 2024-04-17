@@ -11,7 +11,7 @@ export const Contribution = () => {
     const { dashboardState, dashboardAction } = useContext(DashboardContext);
     const [data, setData] = useState([]);
     useEffect(() => {
-        const get_annotator_contributions_command = `LabelerService.${_.get(
+        const get_annotator_contributions_command = `MegannoService.${_.get(
             dashboardState,
             "ipy_interface.service"
         )}.get_statistics().get_annotator_contributions()`;
@@ -23,7 +23,7 @@ export const Contribution = () => {
                 const contributions = JSON.parse(result);
                 var tempData = [],
                     contributionKeys = Object.keys(contributions);
-                const get_user_names_command = `LabelerService.${_.get(
+                const get_user_names_command = `MegannoService.${_.get(
                     dashboardState,
                     "ipy_interface.service"
                 )}.get_users_by_uids(uids=${JSON.stringify(contributionKeys)})`;

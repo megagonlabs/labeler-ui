@@ -16,7 +16,7 @@ export const Agreement = () => {
     const focusLabel = _.get(dashboardState, "focusLabel", "");
     useEffect(() => {
         if (_.isNil(focusLabel) || _.isEmpty(focusLabel)) return;
-        const get_annotator_agreements_command = `LabelerService.${_.get(
+        const get_annotator_agreements_command = `MegannoService.${_.get(
             dashboardState,
             "ipy_interface.service"
         )}.get_statistics().get_annotator_agreements(label_name='${focusLabel}')`;

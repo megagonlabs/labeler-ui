@@ -85,7 +85,7 @@ export const SaveButton = () => {
         const verifyingId = _.get(annotationState, "verifyingId", null);
         for (let i = 0; i < payload_list.length; i++)
             payload_list[i]["annotator_id"] = verifyingId;
-        const set_verification_command = `LabelerSubset.${_.get(
+        const set_verification_command = `MegannoSubset.${_.get(
             annotationState,
             "ipy_interface.service"
         )}.set_verification_data(verify_list=json.loads('${JSON.stringify(
@@ -130,12 +130,12 @@ export const SaveButton = () => {
                 count: processing.length,
             });
             if (_.isEqual(widgetMode, "annotating")) {
-                const submit_annotation_command = `LabelerSubset.${_.get(
+                const submit_annotation_command = `MegannoSubset.${_.get(
                     annotationState,
                     "ipy_interface.service"
                 )}.submit_annotations(uuid_list=['${processing.join(
                     "','"
-                )}'], subset=LabelerSubset.${_.get(annotationState, [
+                )}'], subset=MegannoSubset.${_.get(annotationState, [
                     "ipy_interface",
                     "subset",
                 ])})`;
@@ -173,7 +173,7 @@ export const SaveButton = () => {
                         ],
                     });
                 }
-                const set_reconciliation_command = `LabelerSubset.${_.get(
+                const set_reconciliation_command = `MegannoSubset.${_.get(
                     annotationState,
                     "ipy_interface.service"
                 )}.set_reconciliation_data(recon_list=json.loads('${JSON.stringify(

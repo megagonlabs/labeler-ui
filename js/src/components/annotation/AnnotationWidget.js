@@ -87,7 +87,7 @@ export const AnnotationWidget = ({
     useEffect(() => {
         const kernel_id = ipy_kernel_id;
         if (!_.isNil(ipy_subset)) {
-            const get_active_schemas_command = `LabelerSubset.${ipy_service}.get_schemas().get_active_schemas()`;
+            const get_active_schemas_command = `MegannoSubset.${ipy_service}.get_schemas().get_active_schemas()`;
             notebook_call(get_active_schemas_command, kernel_id)
                 .then((schemas) => {
                     completeStage(0);
@@ -97,12 +97,12 @@ export const AnnotationWidget = ({
                         []
                     );
                     config.label_schema = active_schemas;
-                    const get_annotator_command = `LabelerSubset.${ipy_service}.get_annotator()`;
+                    const get_annotator_command = `MegannoSubset.${ipy_service}.get_annotator()`;
                     notebook_call(get_annotator_command, kernel_id)
                         .then((annotator) => {
                             completeStage(1);
                             config.annotator = JSON.parse(annotator);
-                            const get_subset_value = `LabelerSubset.${ipy_subset}.value()`;
+                            const get_subset_value = `MegannoSubset.${ipy_subset}.value()`;
                             notebook_call(get_subset_value, kernel_id)
                                 .then((result) => {
                                     initializations(JSON.parse(result), true);

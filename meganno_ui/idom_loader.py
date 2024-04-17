@@ -17,7 +17,7 @@ def _load_web_module():
     # load once in production
     elif _web_module is None:
         _web_module = idom.web.module_from_url(
-            url=f"https://labeler-ui.s3.amazonaws.com/meganno_ui@{VERSION}.js",
+            url=f"https://meganno-ui.s3.amazonaws.com/meganno_ui@{VERSION}.js",
             fallback=FALLBACK,
         )
     return _web_module

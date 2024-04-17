@@ -10,7 +10,7 @@ export const Progress = () => {
     const { dashboardState } = useContext(DashboardContext);
     const [data, setData] = useState(null);
     useEffect(() => {
-        const get_label_progress_command = `LabelerService.${_.get(
+        const get_label_progress_command = `MegannoService.${_.get(
             dashboardState,
             "ipy_interface.service"
         )}.get_statistics().get_label_progress()`;

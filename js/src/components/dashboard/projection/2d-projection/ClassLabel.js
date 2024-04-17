@@ -23,7 +23,7 @@ export const ClassLabel = () => {
         const embedType = _.get(dashboardState, "projection.embed_type", null);
         if (_.isEmpty(embedType) || _.isEmpty(focusLabel)) return;
         setIsLoading(true);
-        const get_embeddings_command = `LabelerService.${_.get(
+        const get_embeddings_command = `MegannoService.${_.get(
             dashboardState,
             "ipy_interface.service"
         )}.get_statistics().get_embeddings(label_name='${focusLabel}', embed_type='${embedType}')`;

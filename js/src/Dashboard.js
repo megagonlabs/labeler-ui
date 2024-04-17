@@ -94,7 +94,7 @@ export const Dashboard = ({ config, ipy_service, ipy_kernel_id, wid }) => {
     const [isMinimized, setIsMinimized] = useState(false);
     useEffect(() => {
         if (!_.isNil(ipy_service)) {
-            const get_project_info_command = `LabelerService.${ipy_service}.get_project_info()`;
+            const get_project_info_command = `MegannoService.${ipy_service}.get_project_info()`;
             notebook_call(get_project_info_command, ipy_kernel_id)
                 .then((project_info) => {
                     const result = JSON.parse(project_info);
@@ -115,7 +115,7 @@ export const Dashboard = ({ config, ipy_service, ipy_kernel_id, wid }) => {
                             )[0]
                             .click();
                     completeStage(0);
-                    const get_active_schemas_command = `LabelerService.${ipy_service}.get_schemas().get_active_schemas()`;
+                    const get_active_schemas_command = `MegannoService.${ipy_service}.get_schemas().get_active_schemas()`;
                     notebook_call(get_active_schemas_command, ipy_kernel_id)
                         .then((schemas) => {
                             completeStage(1);
@@ -206,7 +206,7 @@ export const Dashboard = ({ config, ipy_service, ipy_kernel_id, wid }) => {
                 </div>
             ) : (
                 <Overlay
-                    className="labeler-widget height-0"
+                    className="height-0"
                     isOpen={isOpen}
                     hasBackdrop={false}
                     enforceFocus={false}
