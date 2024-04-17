@@ -6,7 +6,7 @@ Documentation for [MEGAnno concepts](https://meganno.megagon.info)
 MEGAnno-client github repository for [installation instructions](https://github.com/megagonlabs/meganno-client)
 
 ## To use in Python Notebook
-![version](https://img.shields.io/badge/meganno--ui%20latest-v1.5.6-blue)
+![version](https://img.shields.io/badge/meganno--ui%20latest-v1.5.7-blue)
 
 You can use either `SSH` or `HTTPS` to install this python package
 - Run `pip install git+ssh://git@github.com/megagonlabs/meganno-ui.git`
