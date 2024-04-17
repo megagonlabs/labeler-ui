@@ -2,6 +2,9 @@
 
 ## **Prerequisite Knowledge**
 Documentation for [MEGAnno concepts](https://meganno.megagon.info) 
+
+MEGAnno-client github repository for [installation instructions](https://github.com/megagonlabs/meganno-client)
+
 ## To use in Python Notebook
 ![version](https://img.shields.io/badge/meganno--ui%20latest-v1.5.6-blue)
 
