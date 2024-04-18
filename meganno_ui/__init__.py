@@ -41,3 +41,4 @@ except Exception as ex:
     pass
 
 from .widgets.Annotation import Annotation
+from .widgets.Dashboard import Dashboard
